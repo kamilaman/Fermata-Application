@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,42 +26,208 @@ class MyApp extends StatelessWidget {
           ],
         ),
         body: Center(
-            child: Column(
-
-              children: <Widget>[
-                Container(
-                  height: 10.0,
-                ),
-                RaisedButton(
-                  padding: EdgeInsets.all(45.0),
-                  color: Theme.of(context).buttonColor,
-                  child: Text('Find Me',
-                    style: TextStyle(
-                      fontSize: 20.0, // insert your font size here
+            child: InkWell(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    height: 30.0,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      print("button 1fa");
+                    },
+                    child: Container(
+                      width: 150.0,
+                      decoration: BoxDecoration(boxShadow: [
+                        BoxShadow(
+                          offset: Offset(0.0, 20.0),
+                          blurRadius: 30.0,
+                          color: Colors.black12
+                        )
+                      ], color: Colors.white, borderRadius: BorderRadius.circular(22.0)),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            height: 50.0,
+                            width: 110.0,
+                            padding: EdgeInsets.symmetric(vertical: 12.0,horizontal: 12.0),
+                            child: Text('FIND Me',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .button
+                                  .apply(color: Colors.black,)),
+                            decoration: BoxDecoration(
+                              color: Colors.deepOrangeAccent,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(95.0),
+                                topLeft: Radius.circular(95.0),
+                                bottomRight: Radius.circular(200.0),
+                              )
+                            ),
+                          ),
+                          Icon(Icons.person_pin_circle_outlined,size: 30.0,)
+                        ],
+                      ),
                     ),
                   ),
-                  textColor: Colors.black,
-                  onPressed: () {
+                  Container(
+                    height: 20.0,
+                  ),
 
-                  },
-                ),
-                Container(
-                  height: 20.0,
-                ),
-                RaisedButton(
-                  padding: EdgeInsets.all(45.0),
-                  color: Theme.of(context).buttonColor,
-                  child: Text('Fermata',
-                    style: TextStyle(
-                      fontSize: 20.0, // insert your font size here
+                  InkWell(
+                    onTap: () {
+                      print("button 2fa");
+                    },
+                    child: Container(
+                      // height: 50.0,
+                      width: 150.0,
+                      decoration: BoxDecoration(boxShadow: [
+                        BoxShadow(
+                            offset: Offset(0.0, 20.0),
+                            blurRadius: 30.0,
+                            color: Colors.black12
+                        )
+                      ], color: Colors.white, borderRadius: BorderRadius.circular(22.0)),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            height: 50.0,
+                            width: 110.0,
+                            padding: EdgeInsets.symmetric(vertical: 12.0,horizontal: 12.0),
+                            child: Text('FERMATA',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .button
+                                    .apply(color: Colors.black,)),
+                            decoration: BoxDecoration(
+                                color: Colors.greenAccent,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(95.0),
+                                  topLeft: Radius.circular(95.0),
+                                  bottomRight: Radius.circular(200.0),
+                                )
+                            ),
+                          ),
+                          Icon(Icons.taxi_alert,size: 30.0,)
+                        ],
+                      ),
                     ),
                   ),
-                  textColor: Colors.black,
-                  onPressed: () {
-
-                  },
-                ),
-              ],
+                  Container(
+                    height: 20.0,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      print("button 2fa");
+                    },
+                    child: Container(
+                      // height: 50.0,
+                      width: 150.0,
+                      decoration: BoxDecoration(boxShadow: [
+                        BoxShadow(
+                            offset: Offset(0.0, 20.0),
+                            blurRadius: 30.0,
+                            color: Colors.black12
+                        )
+                      ], color: Colors.white, borderRadius: BorderRadius.circular(22.0)),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            height: 50.0,
+                            width: 110.0,
+                            padding: EdgeInsets.symmetric(vertical: 12.0,horizontal: 12.0),
+                            child: Text('SERVICE',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .button
+                                    .apply(color: Colors.black,)),
+                            decoration: BoxDecoration(
+                                color: Colors.greenAccent,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(95.0),
+                                  topLeft: Radius.circular(95.0),
+                                  bottomRight: Radius.circular(200.0),
+                                )
+                            ),
+                          ),
+                          Icon(Icons.map_outlined,size: 30.0,)
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 20.0,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      print("button 2fa");
+                    },
+                    child: Container(
+                      // height: 50.0,
+                      width: 150.0,
+                      decoration: BoxDecoration(boxShadow: [
+                        BoxShadow(
+                            offset: Offset(0.0, 20.0),
+                            blurRadius: 30.0,
+                            color: Colors.black12
+                        )
+                      ], color: Colors.white, borderRadius: BorderRadius.circular(22.0)),
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            height: 50.0,
+                            width: 110.0,
+                            padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 6.0),
+                            child: Text('TRAFFIC JAM',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .button
+                                    .apply(color: Colors.black,)),
+                            decoration: BoxDecoration(
+                                color: Colors.greenAccent,
+                                borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(95.0),
+                                  topLeft: Radius.circular(95.0),
+                                  bottomRight: Radius.circular(200.0),
+                                )
+                            ),
+                          ),
+                          Icon(Icons.traffic_outlined,size: 30.0,)
+                        ],
+                      ),
+                    ),
+                  ),
+                  // RaisedButton(
+                  //   padding: EdgeInsets.all(5.0),
+                  //   color: Theme.of(context).buttonColor,
+                  //   child: Text('Find Me',
+                  //     style: TextStyle(
+                  //       fontSize: 20.0, // insert your font size here
+                  //     ),
+                  //   ),
+                  //   textColor: Colors.black,
+                  //   onPressed: () {
+                  //
+                  //   },
+                  // ),
+                  // Container(
+                  //   height: 20.0,
+                  // ),
+                  // RaisedButton(
+                  //   padding: EdgeInsets.all(5.0),
+                  //   color: Theme.of(context).buttonColor,
+                  //   child: Text('Fermata',
+                  //     style: TextStyle(
+                  //       fontSize: 20.0, // insert your font size here
+                  //     ),
+                  //   ),
+                  //   textColor: Colors.black,
+                  //   onPressed: () {
+                  //
+                  //   },
+                  // ),
+                ],
+              ),
             )),
 
         drawer: new Drawer(
